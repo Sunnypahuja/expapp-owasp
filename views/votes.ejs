@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"
+      />
+    <title>Voting Site</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&amp;family=Roboto&amp;display=swap"
+      />
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="assets/css/icons.css" />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <style>
+      .upper {
+      margin-bottom: 0px;
+      }
+      .mb-4 {
+      margin: 20px;
+      }
+      #vote {
+      width: 75%;
+      height: 75%;
+      }
+      @media only screen and (max-width: 600px) {
+      .upper {
+      margin-bottom: 20px;
+      }
+      #vote {
+      width: 100%;
+      }
+      .card-text {
+      display: none;
+      }
+      }
+    </style>
+  </head>
+  <!-- <script src="assets/js/scripts.js"></script> -->
+  <body>
+    <div class="container listing-reg">
+      <table class="listing-table table-light">
+        <thead class="thead-dark">
+        </thead>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Voterid</th>
+            <th>Votes</th>
+          </tr>
+        <tbody>
+          <% for(var i=0; i<vote.length; i++) { %>
+          <tr>
+            <td>
+              <%= vote[i].item %>
+            </td>
+          </tr>
+          <% } %>   
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

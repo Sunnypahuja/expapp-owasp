@@ -1,18 +1,179 @@
-<%- include('header'); %>
-<%- include('nav'); %>
-<main>
-<h3>
-    Sign Up
-</h3>
-<form action="/register" method="POST">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username">
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password">
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email">
-    <label for="phone">Phone</label>
-    <input type="text" name="phone" id="phone">
-    <button class="btn btn-success">Submit</button>
-</form>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Register To Vote</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&amp;family=Roboto&amp;display=swap" />
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="assets/css/icons.css" />
+    <!-- App CSS -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+  </head>
+  <body class="bg-register">
+    <div class="wrapper">
+      <div class="section-authentication-register d-flex align-items-center justify-content-center">
+        <div class="row">
+          <div class="col-12 col-lg-10 mx-auto">
+            <div class="card radius-15">
+              <div class="row no-gutters">
+                <div class="col-lg-6">
+                  <div class="card-body p-md-5">
+                    <div class="text-center">
+                      <img src="assets/images/logo-icon.png" width="80" alt="">
+                      <h3 class="mt-4 font-weight-bold">Create an Account</h3>
+                    </div>
+                    <div class="login-separater text-center">
+                      <span> REGISTER WITH EMAIL</span>
+                      <hr/>
+                    </div>
+                    <form action="/register" method="POST">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="fistname">First Name</label>
+                          <input type="text" class="form-control" placeholder="" id="firstname" name="firstname"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="lastname">Last Name</label>
+                          <input type="text" class="form-control" placeholder="" id="lastname" name="lastname"/>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="username">UserName</label>
+                          <input type="text" class="form-control" placeholder="" id="username" name="username"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="id">Identification Number</label>
+                          <input type="text" class="form-control" placeholder="ABC-1234567" id="id" name="id"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-group" >
+                          <input class="form-control " type="Email" value="" placeholder="example@gmail.com" id="email" name="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label fir ="password">Password</label>
+                        <div class="input-group" id="show_hide_password">
+                          <input class="form-control border-right-0" type="password" value="" id="password" name="password">
+                          <div class="input-group-append">	<a href="javascript:;" class="input-group-text bg-transparent border-left-0"><i class='bx bx-hide'></i></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="dob">Date Of Birth</label>
+                          <input type="date" class="form-control"  id="myDate" value="" placeholder="" id="dob" name="dob"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="phone">Phone Number</label>
+                          <input type="text" class="form-control" placeholder="XXXXXXXXXX" id-="phone" name="phone" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" placeholder="" id="city" name="city" />
+                      </div>
+                      <div class="form-group ">
+                        <label for="state">State</label>
+                        <select class="form-control" id="state" name="state">
+                          <option value="select">-Select-</option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chandigarh">Chandigarh</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                          <option value="Daman and Diu">Daman and Diu</option>
+                          <option value="Delhi" selected>Delhi</option>
+                          <option value="Lakshadweep">Lakshadweep</option>
+                          <option value="Puducherry">Puducherry</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="West Bengal">West Bengal</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1" required>I read and agree to Terms & Conditions</label>
+                        </div>
+                        <button class="btn btn-primary btn-block">Register</button> 
+                      </div>
+                    </form>
+                    <hr/>
+                    </main>
+                    <div class="text-center mt-4">
+                      <p class="mb-0">Already have an account? <a href="/">Login</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <img src="assets/images/login-images/register-frent-img.jpg" class="card-img login-img h-100" alt="...">
+                </div>
+              </div>
+              <!--end row-->
+              <!-- <footer>&copy; Copyright 2021</footer> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end wrapper -->
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/pace.min.js"></script>
+    <!--Password show & hide js -->
+    <script>
+      $(document).ready(function () {
+      	$("#show_hide_password a").on('click', function (event) {
+      		event.preventDefault();
+      		if ($('#show_hide_password input').attr("type") == "text") {
+      			$('#show_hide_password input').attr('type', 'password');
+      			$('#show_hide_password i').addClass("bx-hide");
+      			$('#show_hide_password i').removeClass("bx-show");
+      		} else if ($('#show_hide_password input').attr("type") == "password") {
+      			$('#show_hide_password input').attr('type', 'text');
+      			$('#show_hide_password i').removeClass("bx-hide");
+      			$('#show_hide_password i').addClass("bx-show");
+      		}
+      	});
+      	
+      });
+    </script>
+  </body>
+</html>
